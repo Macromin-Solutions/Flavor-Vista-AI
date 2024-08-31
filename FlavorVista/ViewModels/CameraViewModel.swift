@@ -4,6 +4,7 @@
 //
 //  Created by Asad Sayeed on 18/05/24.
 //
+
 import Foundation
 import AVFoundation
 import UIKit
@@ -29,12 +30,14 @@ class CameraViewModel: NSObject, ObservableObject {
 
     private func checkCameraPermissions() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
-        case .authorized: configure()
+        case .authorized:
+            configure()
         case .notDetermined:
             AVCaptureDevice.requestAccess(for: .video) { granted in
                 if granted { self.configure() }
             }
-        default: print("Camera access denied or restricted.")
+        default:
+            print("Camera access denied or restricted.")
         }
     }
 
@@ -42,6 +45,14 @@ class CameraViewModel: NSObject, ObservableObject {
         sessionQueue.async {
             self.setupSession()
             self.session.startRunning()
+        }
+    }
+    
+    func stopSession() {
+        sessionQueue.async {
+            if self.session.isRunning {
+                self.session.stopRunning()
+            }
         }
     }
 
