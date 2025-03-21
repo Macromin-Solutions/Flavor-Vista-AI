@@ -23,6 +23,7 @@ class ChatViewModel: ObservableObject {
     private var apiKey = ""
     private let assistantId = "asst_xpb2mqcpIbZSLz7GBUm5DRe8"
     private let baseURL = "https://ai-flavorvistaai766530959280.openai.azure.com"
+//    private let baseURL = "https://ai-flavorvistaai766530959280.openai.azure.com/"
     private let remoteConfig: RemoteConfig
     
     // FireBase init() for the API_KEY
