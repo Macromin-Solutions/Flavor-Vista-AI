@@ -47,6 +47,7 @@ struct FoodJournalView: View {
             .onAppear {
                 viewModel.loadEntries()
             }
+
         }
     }
     

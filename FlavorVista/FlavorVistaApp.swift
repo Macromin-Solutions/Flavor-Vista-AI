@@ -29,7 +29,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     FirebaseApp.configure()
       
-      if let firebase = FirebaseApp.app() {
+      if FirebaseApp.app() != nil {
           print(" configured firebase")
       } else {
           print("failed to configure firebase")

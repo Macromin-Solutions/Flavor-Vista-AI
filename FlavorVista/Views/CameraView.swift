@@ -77,7 +77,7 @@ struct CameraView: View {
                                 .cornerRadius(10)
                                 .foregroundColor(.white)
                         }
-                        .padding(.bottom, 100)
+                        .padding(.bottom, 150)
                     }
                 },
                 alignment: .bottom
