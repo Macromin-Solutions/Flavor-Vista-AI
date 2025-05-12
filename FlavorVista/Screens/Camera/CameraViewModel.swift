@@ -12,6 +12,7 @@ import SwiftData
 
 @MainActor
 class CameraViewModel: NSObject, ObservableObject {
+    
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
     @Published var session: AVCaptureSession = AVCaptureSession()
     @Published var capturedImage: UIImage?
@@ -22,12 +23,12 @@ class CameraViewModel: NSObject, ObservableObject {
     @Published var foodEntries: [FoodEntry] = []
     
     let modelContext: ModelContext = SwiftDataManager.shared.modelContainer.mainContext
-
+    
     override init() {
         super.init()
         checkCameraPermissions()
     }
-
+    
     private func checkCameraPermissions() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .authorized:
@@ -40,7 +41,7 @@ class CameraViewModel: NSObject, ObservableObject {
             print("Camera access denied or restricted.")
         }
     }
-
+    
     func configure() {
         sessionQueue.async {
             self.setupSession()
@@ -55,7 +56,7 @@ class CameraViewModel: NSObject, ObservableObject {
             }
         }
     }
-
+    
     private func setupSession() {
         session.beginConfiguration()
         guard let videoDevice = AVCaptureDevice.default(for: .video),
@@ -65,13 +66,13 @@ class CameraViewModel: NSObject, ObservableObject {
         if session.canAddOutput(photoOutput) { session.addOutput(photoOutput) }
         session.commitConfiguration()
     }
-
+    
     func capturePhoto() {
         guard let photoOutput = session.outputs.first as? AVCapturePhotoOutput else { return }
         let photoSettings = AVCapturePhotoSettings()
         photoOutput.capturePhoto(with: photoSettings, delegate: self)
     }
-
+    
     func processImageWithGPTVision(image: UIImage) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.foodName = "Example Food"

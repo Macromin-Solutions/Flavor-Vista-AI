@@ -10,6 +10,7 @@ import SwiftData
 
 @Model
 class FoodEntry: Identifiable {
+    
     @Attribute(.unique) var id = UUID()
     var name: String
     var calories: Int

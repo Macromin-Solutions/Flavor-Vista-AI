@@ -11,10 +11,11 @@ import SwiftData
 
 @MainActor
 class ProfileViewModel: ObservableObject {
+    
     @Published var userProfile: UserProfile
     @Published var ageString: String = ""
-    let genders = ["Male", "Female", "Other"]
     
+    let genders = ["Male", "Female", "Other"]
     let modelContext: ModelContext = SwiftDataManager.shared.modelContainer.mainContext
     
     init() {

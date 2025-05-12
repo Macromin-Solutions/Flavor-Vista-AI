@@ -8,7 +8,7 @@
 import SwiftUI
 import AVFoundation
 
-struct CameraView: View {
+struct CameraScreen: View {
     // Accept the selected tab binding from ContentView.
     @Binding var selectedTab: Int
     @StateObject private var cameraViewModel = CameraViewModel()
@@ -22,7 +22,7 @@ struct CameraView: View {
                     .onAppear {
                         cameraViewModel.configure()
                     }
-                    // Stop the session when this view disappears.
+                // Stop the session when this view disappears.
                     .onDisappear {
                         cameraViewModel.stopSession()
                     }

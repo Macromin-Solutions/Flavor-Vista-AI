@@ -1,3 +1,53 @@
+
+import SwiftUI
+import Charts
+
+struct AIAnalyticsScreen: View {
+    
+    @EnvironmentObject var viewModel: FoodJournalViewModel
+    @State private var showAverage = false
+    
+    var body: some View {
+        VStack {
+            Chart {
+                ForEach(viewModel.foodEntries) { entry in
+                    BarMark(
+                        x: .value("Food", entry.name),
+                        y: .value("Calories", entry.calories)
+                    )
+                    .foregroundStyle(by: .value("Food", entry.name))
+                }
+                if showAverage {
+                    let averageCalories = viewModel.foodEntries.map { $0.calories }.reduce(0, +) / max(viewModel.foodEntries.count, 1)
+                    RuleMark(y: .value("Average", averageCalories))
+                        .foregroundStyle(Color.red)
+                        .lineStyle(StrokeStyle(lineWidth: 2, dash: [5]))
+                        .annotation(position: .top, alignment: .leading) {
+                            Text("average \(averageCalories)")
+                                .font(.caption)
+                                .foregroundColor(.red)
+                        }
+                }
+            }
+            .frame(height: 300)
+            .padding()
+            
+            Toggle(isOn: $showAverage) {
+                Text(showAverage ? "Hide Average" : "Show Average")
+            }
+            .padding()
+        }
+        .navigationTitle("Analytics")
+    }
+}
+
+#Preview {
+    AIAnalyticsScreen()
+        .environmentObject(FoodJournalViewModel())
+}
+
+// Commented Code
+
 ////
 ////  AIAnalyticsView.swift
 ////  FlavorVista AI
@@ -72,51 +122,3 @@
 //#Preview {
 //    AIAnalyticsView()
 //}
-
-import SwiftUI
-import Charts
-
-struct AIAnalyticsView: View {
-    @EnvironmentObject var viewModel: FoodJournalViewModel
-    @State private var showAverage = false
-    
-    var body: some View {
-        VStack {
-            Chart {
-                ForEach(viewModel.foodEntries) { entry in
-                    BarMark(
-                        x: .value("Food", entry.name),
-                        y: .value("Calories", entry.calories)
-                    )
-                    .foregroundStyle(by: .value("Food", entry.name))
-                }
-                if showAverage {
-                    let averageCalories = viewModel.foodEntries.map { $0.calories }.reduce(0, +) / max(viewModel.foodEntries.count, 1)
-                    RuleMark(y: .value("Average", averageCalories))
-                        .foregroundStyle(Color.red)
-                        .lineStyle(StrokeStyle(lineWidth: 2, dash: [5]))
-                        .annotation(position: .top, alignment: .leading) {
-                            Text("average \(averageCalories)")
-                                .font(.caption)
-                                .foregroundColor(.red)
-                        }
-                }
-            }
-            .frame(height: 300)
-            .padding()
-            
-            Toggle(isOn: $showAverage) {
-                Text(showAverage ? "Hide Average" : "Show Average")
-            }
-            .padding()
-        }
-        .navigationTitle("Analytics")
-    }
-}
-
-#Preview {
-    AIAnalyticsView()
-        .environmentObject(FoodJournalViewModel())
-}
-
-

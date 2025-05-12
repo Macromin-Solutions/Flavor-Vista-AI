@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct ProfileScreen: View {
+    
     @StateObject private var viewModel = ProfileViewModel()
-
+    
     var body: some View {
         NavigationStack {
             Form {
-                
                 HStack {
                     Image(systemName: "person.crop.circle")
                         .resizable()
@@ -64,5 +64,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView()
+    ProfileScreen()
 }

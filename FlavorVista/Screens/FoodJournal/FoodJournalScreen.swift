@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct FoodJournalView: View {
+struct FoodJournalScreen: View {
+    
     @StateObject private var viewModel = FoodJournalViewModel()
     
     var body: some View {
@@ -47,15 +48,13 @@ struct FoodJournalView: View {
             .onAppear {
                 viewModel.loadEntries()
             }
-
+            
         }
     }
-    
-    
 }
 
 #Preview {
-    FoodJournalView()
+    FoodJournalScreen()
 }
 
 

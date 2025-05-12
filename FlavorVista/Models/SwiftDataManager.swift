@@ -9,6 +9,7 @@ import Foundation
 import SwiftData
 
 class SwiftDataManager {
+    
     static let shared = SwiftDataManager()
     
     let modelContainer: ModelContainer
