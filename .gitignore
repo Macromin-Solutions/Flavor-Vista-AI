@@ -1,0 +1,73 @@
+# Xcode
+#
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xcscmblueprint
+
+# SwiftPM
+#
+.swiftpm/
+Packages/
+Package.pins
+Package.resolved
+.build/
+
+# Xcode Automatically Generated Files
+#
+*.xcworkspace
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+
+# Playground
+#
+timeline.xctimeline
+playground.xcworkspace
+
+# SwiftUI Preview Artifacts
+#
+*.preview-thumbnails
+*.preview-*.heic
+
+# macOS-specific
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary
+*.swp
+*.tmp
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# CocoaPods (if used)
+Pods/
+Podfile.lock
+
+# Carthage (if used)
+Carthage/
+
+# Firebase/Crashlytics
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Xcode Cloud (optional)
+.xcresults/
+
+# IDE settings
+.idea/
