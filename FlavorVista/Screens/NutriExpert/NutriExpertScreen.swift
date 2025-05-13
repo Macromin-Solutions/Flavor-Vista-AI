@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct NutriExpertView: View {
+struct NutriExpertScreen: View {
+    
     @StateObject private var viewModel = ChatViewModel()
     @State private var userMessage: String = ""
-
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -38,7 +39,7 @@ struct NutriExpertView: View {
                     }
                 }
                 .padding()
-
+                
                 HStack {
                     TextField("Talk to NutriExpert AI...", text: $userMessage)
                         .frame(minHeight: 40)
@@ -48,7 +49,6 @@ struct NutriExpertView: View {
                             RoundedRectangle(cornerRadius: 40)
                                 .stroke(Color.orange, lineWidth: 2)
                         )
-                        
                     
                     Button(action: {
                         viewModel.sendMessage(userMessage)
@@ -70,5 +70,5 @@ struct NutriExpertView: View {
 }
 
 #Preview {
-    NutriExpertView()
+    NutriExpertScreen()
 }

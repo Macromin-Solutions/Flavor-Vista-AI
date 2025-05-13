@@ -10,6 +10,7 @@ import SwiftData
 
 @Model
 class UserProfile: Identifiable {
+    
     @Attribute(.unique) var id = UUID()
     var name: String
     var email: String

@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct DetailedFoodEntryView: View {
+struct DetailedFoodEntryScreen: View {
+    
     @EnvironmentObject var viewModel: FoodJournalViewModel
     @State private var foodEntry: FoodEntry
     

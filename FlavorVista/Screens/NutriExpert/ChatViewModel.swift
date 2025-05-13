@@ -18,6 +18,7 @@ struct Message: Identifiable {
 
 @MainActor
 class ChatViewModel: ObservableObject {
+    
     @Published var messages: [Message] = []
     private var cancellables = Set<AnyCancellable>()
     private var apiKey = ""

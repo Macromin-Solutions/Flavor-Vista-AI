@@ -7,39 +7,40 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct TabBarView: View {
+    
     @State private var selectedTab = 0  // 0 = FoodJournal, etc.
     @EnvironmentObject var viewModel: FoodJournalViewModel
-
+    
     var body: some View {
         NavigationStack {
             TabView(selection: $selectedTab) {
-                FoodJournalView()
+                FoodJournalScreen()
                     .tabItem {
                         Label("Food Journal", systemImage: "fork.knife")
                     }
                     .tag(0)
                 
-                AIAnalyticsView()
+                AIAnalyticsScreen()
                     .tabItem {
                         Label("AI Analytics", systemImage: "wand.and.stars")
                     }
                     .tag(1)
                 
                 // Pass the binding to CameraView.
-                CameraView(selectedTab: $selectedTab)
+                CameraScreen(selectedTab: $selectedTab)
                     .tabItem {
                         Label("Camera", systemImage: "camera.viewfinder")
                     }
                     .tag(2)
                 
-                NutriExpertView()
+                NutriExpertScreen()
                     .tabItem {
                         Label("Nutri Expert 24/7", systemImage: "star.bubble")
                     }
                     .tag(3)
                 
-                ProfileView()
+                ProfileScreen()
                     .tabItem {
                         Label("Profile", systemImage: "person")
                     }
@@ -51,15 +52,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    TabBarView()
 }
-
-
-
-
-
-
-
-
-
-

@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct FoodJournalView: View {
+struct FoodJournalScreen: View {
+    
     @StateObject private var viewModel = FoodJournalViewModel()
     
     var body: some View {
@@ -26,7 +27,7 @@ struct FoodJournalView: View {
                 ScrollView {
                     LazyVGrid(columns: [GridItem(), GridItem()]) {
                         ForEach(viewModel.foodEntries) { entry in
-                            NavigationLink(destination: DetailedFoodEntryView(foodEntry: entry).environmentObject(viewModel)) {
+                            NavigationLink(destination: DetailedFoodEntryScreen(foodEntry: entry).environmentObject(viewModel)) {
                                 VStack {
                                     if let image = viewModel.loadImage(for: entry) {
                                         Image(uiImage: image)
@@ -47,15 +48,13 @@ struct FoodJournalView: View {
             .onAppear {
                 viewModel.loadEntries()
             }
-
+            
         }
     }
-    
-    
 }
 
 #Preview {
-    FoodJournalView()
+    FoodJournalScreen()
 }
 
 
