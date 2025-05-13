@@ -27,7 +27,7 @@ struct FoodJournalScreen: View {
                 ScrollView {
                     LazyVGrid(columns: [GridItem(), GridItem()]) {
                         ForEach(viewModel.foodEntries) { entry in
-                            NavigationLink(destination: DetailedFoodEntryView(foodEntry: entry).environmentObject(viewModel)) {
+                            NavigationLink(destination: DetailedFoodEntryScreen(foodEntry: entry).environmentObject(viewModel)) {
                                 VStack {
                                     if let image = viewModel.loadImage(for: entry) {
                                         Image(uiImage: image)

@@ -17,7 +17,7 @@
 		4ED02FFF2BFA9C540077214E /* AIAnalyticsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED02FFE2BFA9C540077214E /* AIAnalyticsScreen.swift */; };
 		4ED030012BFA9C620077214E /* AIAnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030002BFA9C620077214E /* AIAnalyticsViewModel.swift */; };
 		4ED030052BFA9C790077214E /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030042BFA9C790077214E /* ChatViewModel.swift */; };
-		4ED030072BFA9C830077214E /* DetailedFoodEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030062BFA9C830077214E /* DetailedFoodEntryView.swift */; };
+		4ED030072BFA9C830077214E /* DetailedFoodEntryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030062BFA9C830077214E /* DetailedFoodEntryScreen.swift */; };
 		4ED030092BFA9C8D0077214E /* FoodJournalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030082BFA9C8D0077214E /* FoodJournalScreen.swift */; };
 		4ED0300B2BFA9C950077214E /* FoodJournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0300A2BFA9C950077214E /* FoodJournalViewModel.swift */; };
 		4ED0300D2BFA9C9D0077214E /* NutriExpertScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0300C2BFA9C9D0077214E /* NutriExpertScreen.swift */; };
@@ -43,7 +43,7 @@
 		4ED02FFE2BFA9C540077214E /* AIAnalyticsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAnalyticsScreen.swift; sourceTree = "<group>"; };
 		4ED030002BFA9C620077214E /* AIAnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAnalyticsViewModel.swift; sourceTree = "<group>"; };
 		4ED030042BFA9C790077214E /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
-		4ED030062BFA9C830077214E /* DetailedFoodEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedFoodEntryView.swift; sourceTree = "<group>"; };
+		4ED030062BFA9C830077214E /* DetailedFoodEntryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedFoodEntryScreen.swift; sourceTree = "<group>"; };
 		4ED030082BFA9C8D0077214E /* FoodJournalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodJournalScreen.swift; sourceTree = "<group>"; };
 		4ED0300A2BFA9C950077214E /* FoodJournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodJournalViewModel.swift; sourceTree = "<group>"; };
 		4ED0300C2BFA9C9D0077214E /* NutriExpertScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriExpertScreen.swift; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 		9F07AF972DD257960009B7B0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4ED030062BFA9C830077214E /* DetailedFoodEntryView.swift */,
+				4ED030062BFA9C830077214E /* DetailedFoodEntryScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -294,7 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ED030202BFA9F860077214E /* CameraPhotoView.swift in Sources */,
-				4ED030072BFA9C830077214E /* DetailedFoodEntryView.swift in Sources */,
+				4ED030072BFA9C830077214E /* DetailedFoodEntryScreen.swift in Sources */,
 				4ED030152BFA9CBA0077214E /* SwiftDataManager.swift in Sources */,
 				4ED030172BFA9CC20077214E /* UserProfile.swift in Sources */,
 				4ED0300B2BFA9C950077214E /* FoodJournalViewModel.swift in Sources */,
