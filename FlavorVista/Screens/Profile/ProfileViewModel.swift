@@ -20,7 +20,7 @@ class ProfileViewModel: ObservableObject {
     
     init() {
         // Initialize with default values
-        self.userProfile = UserProfile(name: "User", email: "user@example.com", age: 30, gender: "Other", hasDiabetes: false)
+        self.userProfile = UserProfile(name: "User", email: "user@example.com", age: 30, gender: "Male", hasDiabetes: false)
         loadProfile()
     }
     
