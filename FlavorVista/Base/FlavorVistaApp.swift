@@ -17,7 +17,7 @@ struct FlavorVistaApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabBarView()
                 .environmentObject(viewModel)
             
         }

@@ -11,17 +11,17 @@
 		4E14877C2C83542A00B32D5F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4E14877B2C83542A00B32D5F /* FirebaseAnalytics */; };
 		4E14877E2C83542A00B32D5F /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 4E14877D2C83542A00B32D5F /* FirebaseRemoteConfig */; };
 		4ED02FF12BFA9B650077214E /* FlavorVistaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED02FF02BFA9B650077214E /* FlavorVistaApp.swift */; };
-		4ED02FF32BFA9B650077214E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED02FF22BFA9B650077214E /* ContentView.swift */; };
+		4ED02FF32BFA9B650077214E /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED02FF22BFA9B650077214E /* TabBarView.swift */; };
 		4ED02FF52BFA9B670077214E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED02FF42BFA9B670077214E /* Assets.xcassets */; };
 		4ED02FF82BFA9B670077214E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED02FF72BFA9B670077214E /* Preview Assets.xcassets */; };
-		4ED02FFF2BFA9C540077214E /* AIAnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED02FFE2BFA9C540077214E /* AIAnalyticsView.swift */; };
+		4ED02FFF2BFA9C540077214E /* AIAnalyticsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED02FFE2BFA9C540077214E /* AIAnalyticsScreen.swift */; };
 		4ED030012BFA9C620077214E /* AIAnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030002BFA9C620077214E /* AIAnalyticsViewModel.swift */; };
 		4ED030052BFA9C790077214E /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030042BFA9C790077214E /* ChatViewModel.swift */; };
-		4ED030072BFA9C830077214E /* DetailedFoodEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030062BFA9C830077214E /* DetailedFoodEntryView.swift */; };
-		4ED030092BFA9C8D0077214E /* FoodJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030082BFA9C8D0077214E /* FoodJournalView.swift */; };
+		4ED030072BFA9C830077214E /* DetailedFoodEntryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030062BFA9C830077214E /* DetailedFoodEntryScreen.swift */; };
+		4ED030092BFA9C8D0077214E /* FoodJournalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030082BFA9C8D0077214E /* FoodJournalScreen.swift */; };
 		4ED0300B2BFA9C950077214E /* FoodJournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0300A2BFA9C950077214E /* FoodJournalViewModel.swift */; };
-		4ED0300D2BFA9C9D0077214E /* NutriExpertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0300C2BFA9C9D0077214E /* NutriExpertView.swift */; };
-		4ED030112BFA9CAC0077214E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030102BFA9CAC0077214E /* ProfileView.swift */; };
+		4ED0300D2BFA9C9D0077214E /* NutriExpertScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0300C2BFA9C9D0077214E /* NutriExpertScreen.swift */; };
+		4ED030112BFA9CAC0077214E /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030102BFA9CAC0077214E /* ProfileScreen.swift */; };
 		4ED030132BFA9CB30077214E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030122BFA9CB30077214E /* ProfileViewModel.swift */; };
 		4ED030152BFA9CBA0077214E /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030142BFA9CBA0077214E /* SwiftDataManager.swift */; };
 		4ED030172BFA9CC20077214E /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030162BFA9CC20077214E /* UserProfile.swift */; };
@@ -30,24 +30,24 @@
 		4ED0301E2BFA9F780077214E /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0301D2BFA9F780077214E /* CameraViewModel.swift */; };
 		4ED030202BFA9F860077214E /* CameraPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0301F2BFA9F860077214E /* CameraPhotoView.swift */; };
 		4ED030222BFA9FBD0077214E /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030212BFA9FBD0077214E /* ImageHelper.swift */; };
-		4ED030242BFA9FE40077214E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030232BFA9FE40077214E /* CameraView.swift */; };
+		4ED030242BFA9FE40077214E /* CameraScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030232BFA9FE40077214E /* CameraScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E1487782C834CC100B32D5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4ED02FED2BFA9B650077214E /* FlavorVista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlavorVista.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED02FF02BFA9B650077214E /* FlavorVistaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorVistaApp.swift; sourceTree = "<group>"; };
-		4ED02FF22BFA9B650077214E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4ED02FF22BFA9B650077214E /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		4ED02FF42BFA9B670077214E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4ED02FF72BFA9B670077214E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4ED02FFE2BFA9C540077214E /* AIAnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAnalyticsView.swift; sourceTree = "<group>"; };
+		4ED02FFE2BFA9C540077214E /* AIAnalyticsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAnalyticsScreen.swift; sourceTree = "<group>"; };
 		4ED030002BFA9C620077214E /* AIAnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAnalyticsViewModel.swift; sourceTree = "<group>"; };
 		4ED030042BFA9C790077214E /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
-		4ED030062BFA9C830077214E /* DetailedFoodEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedFoodEntryView.swift; sourceTree = "<group>"; };
-		4ED030082BFA9C8D0077214E /* FoodJournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodJournalView.swift; sourceTree = "<group>"; };
+		4ED030062BFA9C830077214E /* DetailedFoodEntryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedFoodEntryScreen.swift; sourceTree = "<group>"; };
+		4ED030082BFA9C8D0077214E /* FoodJournalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodJournalScreen.swift; sourceTree = "<group>"; };
 		4ED0300A2BFA9C950077214E /* FoodJournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodJournalViewModel.swift; sourceTree = "<group>"; };
-		4ED0300C2BFA9C9D0077214E /* NutriExpertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriExpertView.swift; sourceTree = "<group>"; };
-		4ED030102BFA9CAC0077214E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		4ED0300C2BFA9C9D0077214E /* NutriExpertScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriExpertScreen.swift; sourceTree = "<group>"; };
+		4ED030102BFA9CAC0077214E /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		4ED030122BFA9CB30077214E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		4ED030142BFA9CBA0077214E /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
 		4ED030162BFA9CC20077214E /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		4ED0301D2BFA9F780077214E /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		4ED0301F2BFA9F860077214E /* CameraPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPhotoView.swift; sourceTree = "<group>"; };
 		4ED030212BFA9FBD0077214E /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
-		4ED030232BFA9FE40077214E /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		4ED030232BFA9FE40077214E /* CameraScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,29 +76,9 @@
 		4E95A7132C51FC2900CA8D02 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				4ED0301D2BFA9F780077214E /* CameraViewModel.swift */,
 				4ED030002BFA9C620077214E /* AIAnalyticsViewModel.swift */,
-				4ED0300A2BFA9C950077214E /* FoodJournalViewModel.swift */,
-				4ED030042BFA9C790077214E /* ChatViewModel.swift */,
-				4ED030122BFA9CB30077214E /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		4E95A7142C51FC4D00CA8D02 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				4ED0301B2BFA9F580077214E /* CameraPreview.swift */,
-				4ED02FF22BFA9B650077214E /* ContentView.swift */,
-				4ED0301F2BFA9F860077214E /* CameraPhotoView.swift */,
-				4ED030232BFA9FE40077214E /* CameraView.swift */,
-				4ED02FFE2BFA9C540077214E /* AIAnalyticsView.swift */,
-				4ED030062BFA9C830077214E /* DetailedFoodEntryView.swift */,
-				4ED030082BFA9C8D0077214E /* FoodJournalView.swift */,
-				4ED0300C2BFA9C9D0077214E /* NutriExpertView.swift */,
-				4ED030102BFA9CAC0077214E /* ProfileView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		4E95A7152C51FC7F00CA8D02 /* Models */ = {
@@ -132,9 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				4ED030182BFA9EE40077214E /* Info.plist */,
-				4ED02FF02BFA9B650077214E /* FlavorVistaApp.swift */,
+				9F07AF902DD2559D0009B7B0 /* Base */,
+				9F07AF8F2DD2557F0009B7B0 /* Screens */,
 				4E95A7132C51FC2900CA8D02 /* ViewModels */,
-				4E95A7142C51FC4D00CA8D02 /* Views */,
 				4E95A7152C51FC7F00CA8D02 /* Models */,
 				4ED02FF42BFA9B670077214E /* Assets.xcassets */,
 				4E1487782C834CC100B32D5F /* GoogleService-Info.plist */,
@@ -149,6 +129,90 @@
 				4ED02FF72BFA9B670077214E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9F07AF8F2DD2557F0009B7B0 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				9F07AF912DD256050009B7B0 /* FoodJournal */,
+				9F07AF922DD256430009B7B0 /* AIAnalytics */,
+				9F07AF952DD256F60009B7B0 /* Camera */,
+				9F07AF932DD2569C0009B7B0 /* NutriExpert */,
+				9F07AF942DD256DC0009B7B0 /* Profile */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		9F07AF902DD2559D0009B7B0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4ED02FF02BFA9B650077214E /* FlavorVistaApp.swift */,
+				4ED02FF22BFA9B650077214E /* TabBarView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9F07AF912DD256050009B7B0 /* FoodJournal */ = {
+			isa = PBXGroup;
+			children = (
+				4ED030082BFA9C8D0077214E /* FoodJournalScreen.swift */,
+				4ED0300A2BFA9C950077214E /* FoodJournalViewModel.swift */,
+				9F07AF972DD257960009B7B0 /* Views */,
+			);
+			path = FoodJournal;
+			sourceTree = "<group>";
+		};
+		9F07AF922DD256430009B7B0 /* AIAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				4ED02FFE2BFA9C540077214E /* AIAnalyticsScreen.swift */,
+			);
+			path = AIAnalytics;
+			sourceTree = "<group>";
+		};
+		9F07AF932DD2569C0009B7B0 /* NutriExpert */ = {
+			isa = PBXGroup;
+			children = (
+				4ED0300C2BFA9C9D0077214E /* NutriExpertScreen.swift */,
+				4ED030042BFA9C790077214E /* ChatViewModel.swift */,
+			);
+			path = NutriExpert;
+			sourceTree = "<group>";
+		};
+		9F07AF942DD256DC0009B7B0 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4ED030102BFA9CAC0077214E /* ProfileScreen.swift */,
+				4ED030122BFA9CB30077214E /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		9F07AF952DD256F60009B7B0 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				4ED030232BFA9FE40077214E /* CameraScreen.swift */,
+				4ED0301D2BFA9F780077214E /* CameraViewModel.swift */,
+				9F07AF962DD2575E0009B7B0 /* Views */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		9F07AF962DD2575E0009B7B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4ED0301F2BFA9F860077214E /* CameraPhotoView.swift */,
+				4ED0301B2BFA9F580077214E /* CameraPreview.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F07AF972DD257960009B7B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4ED030062BFA9C830077214E /* DetailedFoodEntryScreen.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,23 +294,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ED030202BFA9F860077214E /* CameraPhotoView.swift in Sources */,
-				4ED030072BFA9C830077214E /* DetailedFoodEntryView.swift in Sources */,
+				4ED030072BFA9C830077214E /* DetailedFoodEntryScreen.swift in Sources */,
 				4ED030152BFA9CBA0077214E /* SwiftDataManager.swift in Sources */,
 				4ED030172BFA9CC20077214E /* UserProfile.swift in Sources */,
 				4ED0300B2BFA9C950077214E /* FoodJournalViewModel.swift in Sources */,
 				4ED0301A2BFA9F050077214E /* FoodEntry.swift in Sources */,
 				4ED0301E2BFA9F780077214E /* CameraViewModel.swift in Sources */,
-				4ED02FF32BFA9B650077214E /* ContentView.swift in Sources */,
-				4ED02FFF2BFA9C540077214E /* AIAnalyticsView.swift in Sources */,
-				4ED030112BFA9CAC0077214E /* ProfileView.swift in Sources */,
+				4ED02FF32BFA9B650077214E /* TabBarView.swift in Sources */,
+				4ED02FFF2BFA9C540077214E /* AIAnalyticsScreen.swift in Sources */,
+				4ED030112BFA9CAC0077214E /* ProfileScreen.swift in Sources */,
 				4ED030222BFA9FBD0077214E /* ImageHelper.swift in Sources */,
 				4ED02FF12BFA9B650077214E /* FlavorVistaApp.swift in Sources */,
 				4ED0301C2BFA9F580077214E /* CameraPreview.swift in Sources */,
-				4ED030242BFA9FE40077214E /* CameraView.swift in Sources */,
+				4ED030242BFA9FE40077214E /* CameraScreen.swift in Sources */,
 				4ED030052BFA9C790077214E /* ChatViewModel.swift in Sources */,
-				4ED0300D2BFA9C9D0077214E /* NutriExpertView.swift in Sources */,
+				4ED0300D2BFA9C9D0077214E /* NutriExpertScreen.swift in Sources */,
 				4ED030132BFA9CB30077214E /* ProfileViewModel.swift in Sources */,
-				4ED030092BFA9C8D0077214E /* FoodJournalView.swift in Sources */,
+				4ED030092BFA9C8D0077214E /* FoodJournalScreen.swift in Sources */,
 				4ED030012BFA9C620077214E /* AIAnalyticsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,7 +443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_ASSET_PATHS = "\"FlavorVista/Preview Content\"";
 				DEVELOPMENT_TEAM = P5SSQXSSU5;
@@ -400,7 +464,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.FlavorVista;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -418,7 +482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"FlavorVista/Preview Content\"";
 				DEVELOPMENT_TEAM = P5SSQXSSU5;
 				ENABLE_PREVIEWS = YES;
@@ -438,7 +502,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.FlavorVista;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
