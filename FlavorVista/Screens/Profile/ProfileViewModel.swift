@@ -14,13 +14,23 @@ class ProfileViewModel: ObservableObject {
     
     @Published var userProfile: UserProfile
     @Published var ageString: String = ""
+    @Published var goalWeight: Int = 0
+    @Published var currentWeight: Int = 0
     
     let genders = ["Male", "Female", "Other"]
     let modelContext: ModelContext = SwiftDataManager.shared.modelContainer.mainContext
     
     init() {
         // Initialize with default values
-        self.userProfile = UserProfile(name: "User", email: "user@example.com", age: 30, gender: "Male", hasDiabetes: false)
+        self.userProfile = UserProfile(
+            name: "User",
+            email: "user@example.com",
+            age: 30,
+            goalWeight: 60,
+            currentWeight: 70,
+            gender: "Male",
+            hasDiabetes: false
+        )
         loadProfile()
     }
     
