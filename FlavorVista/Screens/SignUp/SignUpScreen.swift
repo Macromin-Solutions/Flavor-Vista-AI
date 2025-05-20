@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SignUpScreen: View {
     
+    @StateObject private var viewModel = SignUpViewModel()
+
     @State private var fullName: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
@@ -51,6 +53,12 @@ struct SignUpScreen: View {
                     VStack(spacing: 24) {
                         Button {
                             print("Clicked on Sign Up")
+                            if password == confirmPassword {
+                                viewModel.signUp(email: email,
+                                                 password: password)
+                            } else {
+                                print("Password not match")
+                            }
                         } label: {
                             Text("Sign Up")
                                 .callToActionButton()
