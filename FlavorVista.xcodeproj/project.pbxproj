@@ -30,6 +30,8 @@
 		4ED030202BFA9F860077214E /* CameraPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0301F2BFA9F860077214E /* CameraPhotoView.swift */; };
 		4ED030222BFA9FBD0077214E /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030212BFA9FBD0077214E /* ImageHelper.swift */; };
 		4ED030242BFA9FE40077214E /* CameraScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030232BFA9FE40077214E /* CameraScreen.swift */; };
+		9F07AFFA2DDD0A370009B7B0 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F07AFF92DDD0A290009B7B0 /* SignUpScreen.swift */; };
+		9F07AFFD2DDD15080009B7B0 /* HeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F07AFFC2DDD15020009B7B0 /* HeaderSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		4ED0301F2BFA9F860077214E /* CameraPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPhotoView.swift; sourceTree = "<group>"; };
 		4ED030212BFA9FBD0077214E /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		4ED030232BFA9FE40077214E /* CameraScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScreen.swift; sourceTree = "<group>"; };
+		9F07AFF92DDD0A290009B7B0 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		9F07AFFC2DDD15020009B7B0 /* HeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -141,6 +145,7 @@
 		9F07AF8F2DD2557F0009B7B0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				9F07AFF82DDD0A1C0009B7B0 /* SignUp */,
 				83E37B7A2DDBB39400B10530 /* Login */,
 				9F07AF912DD256050009B7B0 /* FoodJournal */,
 				9F07AF922DD256430009B7B0 /* AIAnalytics */,
@@ -219,6 +224,23 @@
 			isa = PBXGroup;
 			children = (
 				4ED030062BFA9C830077214E /* DetailedFoodEntryScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F07AFF82DDD0A1C0009B7B0 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				9F07AFFB2DDD14FA0009B7B0 /* Views */,
+				9F07AFF92DDD0A290009B7B0 /* SignUpScreen.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		9F07AFFB2DDD14FA0009B7B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9F07AFFC2DDD15020009B7B0 /* HeaderSection.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -310,10 +332,12 @@
 				4ED030072BFA9C830077214E /* DetailedFoodEntryScreen.swift in Sources */,
 				4ED030152BFA9CBA0077214E /* SwiftDataManager.swift in Sources */,
 				4ED030172BFA9CC20077214E /* UserProfile.swift in Sources */,
+				9F07AFFD2DDD15080009B7B0 /* HeaderSection.swift in Sources */,
 				4ED0300B2BFA9C950077214E /* FoodJournalViewModel.swift in Sources */,
 				4ED0301A2BFA9F050077214E /* FoodEntry.swift in Sources */,
 				4ED0301E2BFA9F780077214E /* CameraViewModel.swift in Sources */,
 				4ED02FF32BFA9B650077214E /* TabBarView.swift in Sources */,
+				9F07AFFA2DDD0A370009B7B0 /* SignUpScreen.swift in Sources */,
 				4ED02FFF2BFA9C540077214E /* AIAnalyticsScreen.swift in Sources */,
 				4ED030112BFA9CAC0077214E /* ProfileScreen.swift in Sources */,
 				4ED030222BFA9FBD0077214E /* ImageHelper.swift in Sources */,
