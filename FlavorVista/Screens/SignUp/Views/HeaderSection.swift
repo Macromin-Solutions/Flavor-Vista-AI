@@ -33,3 +33,9 @@ struct HeaderSection: View {
         .padding(.top, 20)
     }
 }
+
+#Preview {
+    HeaderSection(title: "Title",
+                  subtitle: "Subtitle")
+    .background(Color.black)
+}
