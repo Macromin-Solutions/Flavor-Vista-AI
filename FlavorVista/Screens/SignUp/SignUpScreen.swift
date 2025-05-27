@@ -8,15 +8,9 @@
 import SwiftUI
 
 struct SignUpScreen: View {
-    
-    @StateObject private var viewModel = SignUpViewModel()
-
-    @State private var fullName: String = ""
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var confirmPassword: String = ""
     @Environment(\.dismiss) private var dismiss
     
+    @State private var viewModel = SignUpViewModel()
     
     var body: some View {
         NavigationStack {
@@ -28,52 +22,49 @@ struct SignUpScreen: View {
 
                     
                     VStack(alignment: .leading, spacing: 20) {
-                        FVTextFieldView(text: $fullName)
+                        FVTextFieldView(text: $viewModel.fullName)
                             .setTitleText("Full Name")
                             .setPlaceholderText("Enter Full Name")
                         
-                        FVTextFieldView(text: $email)
+                        FVTextFieldView(text: $viewModel.email)
                             .setTitleText("Email")
                             .setPlaceholderText("Enter Email")
+                            .setKeyboardType(.emailAddress)
+                            .textInputAutocapitalization(.never)
                         
-                        FVTextFieldView(text: $password)
+                        FVTextFieldView(text: $viewModel.password)
                             .setTitleText("Password")
                             .setPlaceholderText("Enter Password")
                             .setSecureText(true)
+                            .textInputAutocapitalization(.never)
 
-                        FVTextFieldView(text: $confirmPassword)
+                        FVTextFieldView(text: $viewModel.confirmPassword)
                             .setTitleText("Confirm Password")
                             .setPlaceholderText("Re Enter Password")
                             .setSecureText(true)
+                            .textInputAutocapitalization(.never)
 
                     }
                     .padding(.vertical, 48)
                     
                     Spacer()
+                    
                     VStack(spacing: 24) {
-                        Button {
-                            print("Clicked on Sign Up")
-                            if password == confirmPassword {
-                                viewModel.signUp(email: email,
-                                                 password: password)
-                            } else {
-                                print("Password not match")
-                            }
-                        } label: {
-                            Text("Sign Up")
-                                .callToActionButton()
-                        }
+                        AsyncCallToActionButton(
+                            isLoading: viewModel.isSigningUp,
+                            title: "Sign Up",
+                            action: viewModel.signUp
+                        )
                         
                         HStack {
                             Text("Already have an account?")
                                 .foregroundStyle(.grayscale100)
-                            Button {
-                                print("Clicked on Log In")
-                            } label: {
-                                Text("Log In")
-                                    .foregroundStyle(.primary100)
-                            }
-
+                            
+                            Text("Log In")
+                                .foregroundStyle(.primary100)
+                                .asButton {
+                                    dismiss()
+                                }
                         }
                         .font(.flavorVista(fontStyle: .body))
                     }

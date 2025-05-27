@@ -8,7 +8,6 @@
 import SwiftUI
 import Firebase
 
-
 @main
 struct FlavorVistaApp: App {
     @StateObject private var viewModel = FoodJournalViewModel()
@@ -17,26 +16,23 @@ struct FlavorVistaApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TabBarView()
-                .environmentObject(viewModel)
-            
+            if AuthService.shared.currentUser != nil {
+                TabBarView()
+                    .environmentObject(viewModel)
+            } else {
+                LoginScreen()
+            }
         }
     }
 }
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-      
-      if FirebaseApp.app() != nil {
-          print(" configured firebase")
-      } else {
-          print("failed to configure firebase")
-      }
-
-
-    return true
-  }
+    
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
+    ) -> Bool {
+        FirebaseApp.configure()
+        return true
+    }
 }
-

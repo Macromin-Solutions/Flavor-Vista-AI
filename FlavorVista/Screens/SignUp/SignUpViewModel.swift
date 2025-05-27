@@ -5,35 +5,37 @@
 //  Created by Ahmad Dannah on 22/11/1446 AH.
 //
 
-import FirebaseAuth
-import SwiftUICore
+import SwiftUI
+import Observation
 
-@MainActor
-class SignUpViewModel: ObservableObject {
+@Observable class SignUpViewModel {
+    var fullName = ""
+    var email = ""
+    var password = ""
+    var confirmPassword = ""
+    var isSigningUp = false
     
-    
-    func signUp(email: String, password: String) {
-        guard !email.isEmpty, !password.isEmpty else {
-            print("Email and Password must not be empty.")
-            return
-        }
+    func signUp() {
+        isSigningUp = true
         
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            if let error = error {
+        Task {
+            do {
+                if email.isEmpty || password.isEmpty {
+                    isSigningUp = false
+                    print("Email and Password must not be empty.")
+                    return
+                }
+                
+                if confirmPassword != password {
+                    isSigningUp = false
+                    print("Password not match")
+                    return
+                }
+                
+                try await AuthService.shared.signUp(email: email, password: password)
+                isSigningUp = false
+            } catch {
                 print("Error creating user: \(error.localizedDescription)")
-            } else {
-                print("User created: \(result?.user.email ?? "")")
-                // Navigate to the next Screen
-            }
-        }
-    }
-    
-    func logIn(email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            if let error = error {
-                print("Login error: \(error.localizedDescription)")
-            } else {
-                print("Logged in: \(result?.user.email ?? "")")
             }
         }
     }
