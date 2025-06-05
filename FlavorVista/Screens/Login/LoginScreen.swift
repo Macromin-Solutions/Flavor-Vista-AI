@@ -12,11 +12,8 @@ import SwiftUI
 struct LoginScreen: View {
     // MARK: - State Properties
     
-    /// Stores the user's email input.
-    @State private var email = ""
-    
-    /// Stores the user's password input.
-    @State private var password = ""
+    @State private var viewModel = LoginViewModel()
+    @State private var isLoading = false
     
     var body: some View {
         NavigationStack {
@@ -42,14 +39,19 @@ struct LoginScreen: View {
                     VStack(spacing: 12) {
                         VStack(spacing: 20) {
                             // Email Input
-                            FVTextFieldView(text: $email)
+                            FVTextFieldView(text: $viewModel.email)
                                 .setTitleText("Email")
                                 .setPlaceholderText("Enter Email")
+                                .setKeyboardType(.emailAddress)
+                                .setError(errorText: .constant("Please enter your email"), error: $viewModel.showEmailError)
+                                .textInputAutocapitalization(.never)
                             
                             // Password Input
-                            FVTextFieldView(text: $password)
+                            FVTextFieldView(text: $viewModel.password)
                                 .setTitleText("Password")
                                 .setPlaceholderText("Enter Password")
+                                .setSecureText(true)
+                                .setError(errorText: .constant("Please enter your password"), error: $viewModel.showPasswordError)
                         }
                         
                         // Forgot Password Link
@@ -88,18 +90,23 @@ struct LoginScreen: View {
                 
                 // MARK: - Log In Button and Sign-Up Prompt
                 VStack(spacing: 24) {
-                    Text("Log In")
-                        .callToActionButton()
-                        .asButton(.press) {
-                            // Log in action handler (currently empty)
-                        }
+                    AsyncCallToActionButton(
+                        isLoading: viewModel.isSigningIn,
+                        title: "Log In",
+                        action: viewModel.signIn
+                    )
                     
                     HStack {
                         Text("Don't have an account?")
                             .foregroundStyle(.grayscale100)
                         
-                        Text("Sign Up")
-                            .foregroundStyle(.primary100)
+                        NavigationLink {
+                            SignUpScreen()
+                                .navigationBarBackButtonHidden()
+                        } label: {
+                            Text("Sign Up")
+                                .foregroundStyle(.primary100)
+                        }
                     }
                     .font(.flavorVista(fontStyle: .body))
                 }

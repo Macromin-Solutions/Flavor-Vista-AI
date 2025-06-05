@@ -30,6 +30,7 @@
 		4ED030202BFA9F860077214E /* CameraPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0301F2BFA9F860077214E /* CameraPhotoView.swift */; };
 		4ED030222BFA9FBD0077214E /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030212BFA9FBD0077214E /* ImageHelper.swift */; };
 		4ED030242BFA9FE40077214E /* CameraScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030232BFA9FE40077214E /* CameraScreen.swift */; };
+		8354331C2DDF792600B284DF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8354331B2DDF792600B284DF /* UserModel.swift */; };
 		9F07AFFA2DDD0A370009B7B0 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F07AFF92DDD0A290009B7B0 /* SignUpScreen.swift */; };
 		9F07AFFD2DDD15080009B7B0 /* HeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F07AFFC2DDD15020009B7B0 /* HeaderSection.swift */; };
 		9F07B03F2DDD19220009B7B0 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F07B03E2DDD191E0009B7B0 /* SignUpViewModel.swift */; };
@@ -80,12 +81,14 @@
 		4ED0301F2BFA9F860077214E /* CameraPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPhotoView.swift; sourceTree = "<group>"; };
 		4ED030212BFA9FBD0077214E /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		4ED030232BFA9FE40077214E /* CameraScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScreen.swift; sourceTree = "<group>"; };
+		8354331B2DDF792600B284DF /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9F07AFF92DDD0A290009B7B0 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		9F07AFFC2DDD15020009B7B0 /* HeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSection.swift; sourceTree = "<group>"; };
 		9F07B03E2DDD191E0009B7B0 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		8354330F2DDF73E100B284DF /* Services */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Services; sourceTree = "<group>"; };
 		83E37B7A2DDBB39400B10530 /* Login */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Login; sourceTree = "<group>"; };
 		83E37B7E2DDBB3D600B10530 /* SharedComponents */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SharedComponents; sourceTree = "<group>"; };
 		83E37B832DDBD67100B10530 /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
@@ -141,6 +144,7 @@
 				4ED030162BFA9CC20077214E /* UserProfile.swift */,
 				4ED030142BFA9CBA0077214E /* SwiftDataManager.swift */,
 				4ED030192BFA9F050077214E /* FoodEntry.swift */,
+				8354331B2DDF792600B284DF /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -164,6 +168,7 @@
 		4ED02FEF2BFA9B650077214E /* FlavorVista */ = {
 			isa = PBXGroup;
 			children = (
+				8354330F2DDF73E100B284DF /* Services */,
 				4ED030182BFA9EE40077214E /* Info.plist */,
 				9F07AF902DD2559D0009B7B0 /* Base */,
 				83E37B912DDBD89300B10530 /* Extensions */,
@@ -306,6 +311,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				8354330F2DDF73E100B284DF /* Services */,
 				83E37B7A2DDBB39400B10530 /* Login */,
 				83E37B7E2DDBB3D600B10530 /* SharedComponents */,
 				83E37B832DDBD67100B10530 /* Resources */,
@@ -349,7 +355,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					4ED02FEC2BFA9B650077214E = {
 						CreatedOnToolsVersion = 15.4;
@@ -400,6 +406,7 @@
 				4ED030172BFA9CC20077214E /* UserProfile.swift in Sources */,
 				9F07AFFD2DDD15080009B7B0 /* HeaderSection.swift in Sources */,
 				4ED0300B2BFA9C950077214E /* FoodJournalViewModel.swift in Sources */,
+				8354331C2DDF792600B284DF /* UserModel.swift in Sources */,
 				4ED0301A2BFA9F050077214E /* FoodEntry.swift in Sources */,
 				4ED0301E2BFA9F780077214E /* CameraViewModel.swift in Sources */,
 				4ED02FF32BFA9B650077214E /* TabBarView.swift in Sources */,
@@ -457,6 +464,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = P5SSQXSSU5;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -520,6 +528,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = P5SSQXSSU5;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -550,7 +559,6 @@
 				CURRENT_PROJECT_VERSION = 5;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_ASSET_PATHS = "\"FlavorVista/Preview Content\"";
-				DEVELOPMENT_TEAM = P5SSQXSSU5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlavorVista/Info.plist;
@@ -588,7 +596,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"FlavorVista/Preview Content\"";
-				DEVELOPMENT_TEAM = P5SSQXSSU5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlavorVista/Info.plist;

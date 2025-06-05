@@ -64,6 +64,17 @@ struct ProfileScreen: View {
                     }
                     .padding(.horizontal)
                     
+                    Button(role: .destructive) {
+                        do {
+                            try AuthService.shared.signOut()
+                        } catch {
+                            print("Failed to signed out")
+                        }
+                    } label: {
+                        Text("Sign Out")
+                    }
+
+                    
                     Spacer()
                 }
                 .padding(.vertical)

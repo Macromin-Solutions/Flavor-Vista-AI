@@ -43,6 +43,10 @@ struct FVTextFieldView: View {
     /// Keyboard type (e.g. email, numberPad).
     private var keyboardType: UIKeyboardType = .default
     
+    private var focusedBorderColorEnable: Bool = true
+    
+    private var disableAutoCorrection: Bool = true
+    
     // MARK: - UI State
     
     @State private var isFocused = false
@@ -82,16 +86,30 @@ struct FVTextFieldView: View {
                         .placeholder(when: text.wrappedValue.isEmpty) {
                             Text(placeholderText)
                                 .font(.flavorVista(fontStyle: .body))
-                                .foregroundStyle(.grayscale200)
+                                .foregroundStyle(getPlaceholderTextColor())
                         }
                         .font(.flavorVista(fontStyle: .body))
                         .frame(maxWidth: .infinity)
                         .frame(height: textFieldHeight)
-                        .foregroundStyle(.grayscale100)
+                        .foregroundStyle(getTextColor())
                         .disabled(disable?.wrappedValue ?? false)
                         .padding(.horizontal, 20)
+                        .autocorrectionDisabled(disableAutoCorrection)
                         .keyboardType(keyboardType)
                         .background(Color.clear)
+                        
+                    if isSecureText {
+                        Image(systemName: secureText ? "eye.slash" : "eye")
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundStyle(.grayscale200)
+                            .frame(width: 24, height: 24)
+                            .padding(.trailing, 20)
+                            .onTapGesture {
+                                secureText.toggle()
+                            }
+                            .disabled(disable?.wrappedValue ?? false)
+                    }
                 }
                 .background {
                     RoundedRectangle(cornerRadius: cornerRadius)
@@ -129,13 +147,33 @@ struct FVTextFieldView: View {
         }
     }
     
+    private func getPlaceholderTextColor() -> Color {
+        if disable?.wrappedValue ?? false {
+            return Color.grayscale300
+        }
+        
+        return Color.grayscale200
+    }
+    
+    private func getTextColor() -> Color {
+        if error?.wrappedValue ?? false {
+            return Color.grayscale200
+        }
+        
+        if disable?.wrappedValue ?? false {
+            return Color.grayscale300
+        }
+        
+        return Color.grayscale100
+    }
+    
     /// Determines the border color based on focus or error state.
     private func getBorderColor() -> Color {
         if error?.wrappedValue ?? false {
             return Color.message200
         }
         
-        if isFocused {
+        if isFocused && focusedBorderColorEnable {
             return Color.grayscale100
         }
         
@@ -179,6 +217,7 @@ extension FVTextFieldView {
     /// Configures the field for secure (password) input.
     public func setSecureText(_ secure: Bool) -> Self{
         var copy = self
+        copy.focusedBorderColorEnable = false
         copy._secureText = State(initialValue: secure)
         copy.isSecureText = secure
         return copy
@@ -188,6 +227,12 @@ extension FVTextFieldView {
     public func setKeyboardType(_ type: UIKeyboardType) -> Self {
         var copy = self
         copy.keyboardType = type
+        return copy
+    }
+    
+    public func setDisableAutoCorrection(_ disable: Bool) -> Self{
+        var copy = self
+        copy.disableAutoCorrection = disable
         return copy
     }
 }
@@ -233,6 +278,20 @@ extension FVTextFieldView {
             .setTitleText("First name here")
             .setPlaceholderText("First name here")
             .setError(errorText: $errorText, error: $showError)
+            .padding(20)
+    }
+}
+
+#Preview("Disabled") {
+    @Previewable @State var name = ""
+    
+    ZStack {
+        Color.grayscale600.ignoresSafeArea()
+        
+        FVTextFieldView(text: $name)
+            .setTitleText("First name here")
+            .setPlaceholderText("First name here")
+            .setDisable(.constant(true))
             .padding(20)
     }
 }
