@@ -10,7 +10,7 @@ import AVFoundation
 
 struct CameraScreen: View {
     // Accept the selected tab binding from ContentView.
-    @Binding var selectedTab: Int
+    @Binding var selectedTab: Tab
     @StateObject private var cameraViewModel = CameraViewModel()
     
     var body: some View {
@@ -34,7 +34,7 @@ struct CameraScreen: View {
                         Button(action: {
                             // Stop the camera and switch to Food Journal view (tag 0)
                             cameraViewModel.stopSession()
-                            selectedTab = 0
+                            selectedTab = .foodJournal
                         }) {
                             Image(systemName: "xmark.circle.fill")
                                 .font(.system(size: 28))
