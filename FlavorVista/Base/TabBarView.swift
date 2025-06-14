@@ -7,44 +7,52 @@
 
 import SwiftUI
 
+enum Tab {
+    case foodJournal
+    case aiAnalytics
+    case camera
+    case nutriChat
+    case profile
+}
+
 struct TabBarView: View {
     
-    @State private var selectedTab = 0  // 0 = FoodJournal, etc.
+    @State private var selectedTab: Tab = .foodJournal   // 0 = FoodJournal, etc.
     @EnvironmentObject var viewModel: FoodJournalViewModel
     
     var body: some View {
         NavigationStack {
             TabView(selection: $selectedTab) {
-                FoodJournalScreen()
+                FoodJournalScreen(selectedTab: $selectedTab)
                     .tabItem {
                         Label("Food Journal", systemImage: "fork.knife")
                     }
-                    .tag(0)
-                
+                    .tag(Tab.foodJournal)
+
                 AIAnalyticsScreen()
                     .tabItem {
                         Label("AI Analytics", systemImage: "wand.and.stars")
                     }
-                    .tag(1)
-                
+                    .tag(Tab.aiAnalytics)
+
                 // Pass the binding to CameraView.
                 CameraScreen(selectedTab: $selectedTab)
                     .tabItem {
                         Label("Camera", systemImage: "camera.viewfinder")
                     }
-                    .tag(2)
-                
+                    .tag(Tab.camera)
+
                 NutriExpertScreen()
                     .tabItem {
                         Label("Nutri Expert 24/7", systemImage: "star.bubble")
                     }
-                    .tag(3)
-                
+                    .tag(Tab.nutriChat)
+
                 ProfileScreen()
                     .tabItem {
                         Label("Profile", systemImage: "person")
                     }
-                    .tag(4)
+                    .tag(Tab.profile)
             }
             .tint(.orange)
         }
