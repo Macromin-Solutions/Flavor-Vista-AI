@@ -21,28 +21,33 @@ class CameraViewModel: NSObject, ObservableObject {
     @Published var nutritionalSummary: String = ""
     @Published var isProcessing: Bool = false
     @Published var foodEntries: [FoodEntry] = []
-    
+    private(set) var hasDeniedPermission: Bool = false
+    @Published var showHasDeniedPermissionScreen: Bool = false
+
     let modelContext: ModelContext = SwiftDataManager.shared.modelContainer.mainContext
     
-    override init() {
-        super.init()
-        checkCameraPermissions()
-    }
-    
-    private func checkCameraPermissions() {
+    func checkCameraPermissions() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .authorized:
             configure()
         case .notDetermined:
             AVCaptureDevice.requestAccess(for: .video) { granted in
-                if granted { self.configure() }
+                if granted {
+
+                    self.configure()
+                }
             }
         default:
             print("Camera access denied or restricted.")
+            hasDeniedPermission = true
+            showHasDeniedPermissionScreen = true
         }
     }
     
-    func configure() {
+    private func configure() {
+        self.hasDeniedPermission = false
+        self.showHasDeniedPermissionScreen = false
+
         sessionQueue.async {
             self.setupSession()
             self.session.startRunning()
@@ -61,9 +66,13 @@ class CameraViewModel: NSObject, ObservableObject {
         session.beginConfiguration()
         guard let videoDevice = AVCaptureDevice.default(for: .video),
               let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice) else { return }
-        if session.canAddInput(videoDeviceInput) { session.addInput(videoDeviceInput) }
+        if session.canAddInput(videoDeviceInput) {
+            session.addInput(videoDeviceInput)
+        }
         let photoOutput = AVCapturePhotoOutput()
-        if session.canAddOutput(photoOutput) { session.addOutput(photoOutput) }
+        if session.canAddOutput(photoOutput) {
+            session.addOutput(photoOutput)
+        }
         session.commitConfiguration()
     }
     
