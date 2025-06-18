@@ -63,18 +63,34 @@ class CameraViewModel: NSObject, ObservableObject {
     }
     
     private func setupSession() {
-        session.beginConfiguration()
-        guard let videoDevice = AVCaptureDevice.default(for: .video),
-              let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice) else { return }
-        if session.canAddInput(videoDeviceInput) {
-            session.addInput(videoDeviceInput)
+          session.beginConfiguration()
+          guard let videoDevice = AVCaptureDevice.default(for: .video) else {
+              print("No video device available — likely running on Simulator.")
+              session.commitConfiguration()
+              return
+          }
+          guard let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice) else {
+                 session.commitConfiguration()
+                 return
+             }
+          if session.canAddInput(videoDeviceInput) { session.addInput(videoDeviceInput) }
+          let photoOutput = AVCapturePhotoOutput()
+          if session.canAddOutput(photoOutput) { session.addOutput(photoOutput) }
+          session.commitConfiguration()
         }
-        let photoOutput = AVCapturePhotoOutput()
-        if session.canAddOutput(photoOutput) {
-            session.addOutput(photoOutput)
-        }
-        session.commitConfiguration()
-    }
+
+//         session.beginConfiguration()
+//         guard let videoDevice = AVCaptureDevice.default(for: .video),
+//               let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice) else { return }
+//         if session.canAddInput(videoDeviceInput) {
+//             session.addInput(videoDeviceInput)
+//         }
+//         let photoOutput = AVCapturePhotoOutput()
+//         if session.canAddOutput(photoOutput) {
+//             session.addOutput(photoOutput)
+//         }
+//         session.commitConfiguration()
+//     }
     
     func capturePhoto() {
         guard let photoOutput = session.outputs.first as? AVCapturePhotoOutput else { return }
