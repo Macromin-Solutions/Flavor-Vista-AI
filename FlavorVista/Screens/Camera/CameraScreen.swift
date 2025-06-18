@@ -20,7 +20,7 @@ struct CameraScreen: View {
                 CameraPreview(session: cameraViewModel.session)
                     .ignoresSafeArea()
                     .onAppear {
-                        cameraViewModel.configure()
+                        cameraViewModel.checkCameraPermissions()
                     }
                 // Stop the session when this view disappears.
                     .onDisappear {
@@ -84,5 +84,10 @@ struct CameraScreen: View {
             )
         }
         .environmentObject(cameraViewModel)
+        .fullScreenCover(
+            isPresented: $cameraViewModel.showHasDeniedPermissionScreen) {
+            CameraPermissionDeniedScreen(selectedTab: $selectedTab)
+                .environmentObject(cameraViewModel)
+        }
     }
 }
