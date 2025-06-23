@@ -36,7 +36,7 @@ struct TabBarView: View {
                     .tag(Tab.aiAnalytics)
 
                 // Pass the binding to CameraView.
-                CameraScreen(selectedTab: $selectedTab)
+//                CameraScreen(selectedTab: $selectedTab)
                     .tabItem {
                         Label("Camera", systemImage: "camera.viewfinder")
                     }
