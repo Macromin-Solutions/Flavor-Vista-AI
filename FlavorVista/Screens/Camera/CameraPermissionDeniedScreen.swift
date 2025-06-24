@@ -13,8 +13,8 @@ import AVFoundation
 struct CameraPermissionDeniedScreen: View {
     
     /// The currently selected tab in the parent view, used to redirect on denial.
-    @Binding var selectedTab: Int
-    
+    @Binding var selectedTab: Tab
+
     /// Environment dismiss action to close the current view.
     @Environment(\.dismiss) var dismiss
     
@@ -128,7 +128,7 @@ struct CameraPermissionDeniedScreen: View {
         cameraViewModel.checkCameraPermissions()
         
         if (cameraViewModel.hasDeniedPermission) {
-            selectedTab = 0
+            selectedTab = .foodJournal
         }
         
         dismiss()
@@ -137,5 +137,5 @@ struct CameraPermissionDeniedScreen: View {
 
 /// Preview for CameraPermissionDeniedScreen with a default selected tab binding.
 #Preview {
-    CameraPermissionDeniedScreen(selectedTab: .constant(0))
+    CameraPermissionDeniedScreen(selectedTab: .constant(.foodJournal))
 }

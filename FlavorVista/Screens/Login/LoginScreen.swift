@@ -43,7 +43,10 @@ struct LoginScreen: View {
                                 .setTitleText("Email")
                                 .setPlaceholderText("Enter Email")
                                 .setKeyboardType(.emailAddress)
-                                .setError(errorText: .constant("Please enter your email"), error: $viewModel.showEmailError)
+                                .setError(errorText: Binding(
+                                            get: { viewModel.emailError ?? "" },
+                                            set: { _ in }), error: .constant(viewModel.emailError != nil)
+                                        )
                                 .textInputAutocapitalization(.never)
                             
                             // Password Input
@@ -51,7 +54,10 @@ struct LoginScreen: View {
                                 .setTitleText("Password")
                                 .setPlaceholderText("Enter Password")
                                 .setSecureText(true)
-                                .setError(errorText: .constant("Please enter your password"), error: $viewModel.showPasswordError)
+                                .setError(errorText: Binding(
+                                    get: { viewModel.passwordError ?? "" },
+                                    set: { _ in }), error: .constant(viewModel.passwordError != nil)
+                                        )
                         }
                         
                         // Forgot Password Link
