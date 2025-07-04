@@ -31,6 +31,7 @@
 		4ED030202BFA9F860077214E /* CameraPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0301F2BFA9F860077214E /* CameraPhotoView.swift */; };
 		4ED030222BFA9FBD0077214E /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030212BFA9FBD0077214E /* ImageHelper.swift */; };
 		4ED030242BFA9FE40077214E /* CameraScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED030232BFA9FE40077214E /* CameraScreen.swift */; };
+		5DFCE0232E12A247008145C0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFCE0222E12A247008145C0 /* LoadingView.swift */; };
 		8354331C2DDF792600B284DF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8354331B2DDF792600B284DF /* UserModel.swift */; };
 		9F07AFFA2DDD0A370009B7B0 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F07AFF92DDD0A290009B7B0 /* SignUpScreen.swift */; };
 		9F07AFFD2DDD15080009B7B0 /* HeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F07AFFC2DDD15020009B7B0 /* HeaderSection.swift */; };
@@ -83,6 +84,7 @@
 		4ED0301F2BFA9F860077214E /* CameraPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPhotoView.swift; sourceTree = "<group>"; };
 		4ED030212BFA9FBD0077214E /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		4ED030232BFA9FE40077214E /* CameraScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScreen.swift; sourceTree = "<group>"; };
+		5DFCE0222E12A247008145C0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		8354331B2DDF792600B284DF /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9F07AFF92DDD0A290009B7B0 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		9F07AFFC2DDD15020009B7B0 /* HeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSection.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 		9F07AF8F2DD2557F0009B7B0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5DFCE0222E12A247008145C0 /* LoadingView.swift */,
 				9F07AFF82DDD0A1C0009B7B0 /* SignUp */,
 				83E37B7A2DDBB39400B10530 /* Login */,
 				9F07AF912DD256050009B7B0 /* FoodJournal */,
@@ -439,6 +442,7 @@
 				8354331C2DDF792600B284DF /* UserModel.swift in Sources */,
 				4ED0301A2BFA9F050077214E /* FoodEntry.swift in Sources */,
 				4ED0301E2BFA9F780077214E /* CameraViewModel.swift in Sources */,
+				5DFCE0232E12A247008145C0 /* LoadingView.swift in Sources */,
 				4ED02FF32BFA9B650077214E /* TabBarView.swift in Sources */,
 				9F07AFFA2DDD0A370009B7B0 /* SignUpScreen.swift in Sources */,
 				0DDC29352DF5A9E7008CEDB7 /* CameraPermissionDeniedScreen.swift in Sources */,
